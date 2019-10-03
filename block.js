@@ -10,21 +10,19 @@ class Block {
     return `Block-
       Timestamp: ${this.timestamp}
       PrevHash: ${this.prevHash.substring(0, 10)}
-      Hash: ${this.Hash.substring(0m 10)}
+      Hash: ${this.Hash.substring(0, 10)}
       Data: ${this.data}
       `;
   }
 
-  static genesis(){
-      const timestamp = "Genesis Time";
-      const prevHash = "----------------";
-      const data = [];
-      const hash = Block.hash(timestamp, prevHash, data);
+  static genesis() {
+    const timestamp = "Genesis Time";
+    const prevHash = "----------------";
+    const data = [];
+    const hash = Block.hash(timestamp, prevHash, data);
 
-      return new this(timestamp, prevHash, data, hash);
+    return new this(timestamp, prevHash, data, hash);
   }
-
-
-
-
 }
+
+module.exports = Block;
