@@ -1,0 +1,23 @@
+{
+  "name": "pg-blockchain-i",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rorychristianmurray/pg-blockchain-i.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rorychristianmurray/pg-blockchain-i/issues"
+  },
+  "homepage": "https://github.com/rorychristianmurray/pg-blockchain-i#readme",
+  "dependencies": {
+    "nodemon": "^1.19.3"
+  }
+}
