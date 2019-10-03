@@ -1,16 +1,16 @@
 class Block {
-  constructor(timestamp, prevHash, Hash, data) {
+  constructor(timestamp, prevHash, hash, data) {
     this.timestamp = timestamp;
     this.prevHash = prevHash;
-    this.Hash = Hash;
+    this.hash = hash;
     this.data = data;
   }
 
   toString() {
     return `Block-
       Timestamp: ${this.timestamp}
-      PrevHash: ${this.prevHash.substring(0, 10)}
-      Hash: ${this.Hash.substring(0, 10)}
+      PrevHash: ${this.prevHash}
+      Hash: ${this.hash}
       Data: ${this.data}
       `;
   }
@@ -19,7 +19,15 @@ class Block {
     const timestamp = "Genesis Time";
     const prevHash = "----------------";
     const data = [];
-    const hash = Block.hash(timestamp, prevHash, data);
+    const hash = "todo-hash";
+
+    return new this(timestamp, prevHash, data, hash);
+  }
+
+  static mineBlock(prevBlock, data) {
+    const timestamp = Date.now();
+    const prevHash = prevBlock.hash;
+    const hash = "todo-hash";
 
     return new this(timestamp, prevHash, data, hash);
   }
