@@ -21,7 +21,7 @@ class Block {
     const timestamp = "Genesis Time";
     const prevHash = "----------------";
     const data = [];
-    const hash = "todo-hash";
+    const hash = Block.hash(timestamp, prevHash, data);
 
     return new this(timestamp, prevHash, data, hash);
   }
@@ -29,13 +29,13 @@ class Block {
   static mineBlock(prevBlock, data) {
     const timestamp = Date.now();
     const prevHash = prevBlock.hash;
-    const hash = "todo-hash";
+    const hash = Block.hash(timestamp, prevHash, data);
 
     return new this(timestamp, prevHash, data, hash);
   }
 
   static hash(timestamp, prevHash, data) {
-    return SHA256(`${timestamp}${prevHash}${data}`);
+    return SHA256(`${timestamp}${prevHash}${data}`.toString());
   }
 }
 
